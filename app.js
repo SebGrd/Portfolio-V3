@@ -54,3 +54,9 @@ app.use((err, req, res, next) => {
 });
 
 module.exports = app;
+
+const server = app.listen(8080, () => {
+  const host = server.address().address;
+  const port = server.address().port;
+  console.log(`App listening at http://${host}:${port}`);
+});
