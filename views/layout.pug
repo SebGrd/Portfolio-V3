@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    meta(name='description' content='Portfolio de Sébastien Gaudard, developpeur front-end.')
+
+    title #{title} | Sébastien Gaudard
+
+    link(rel='shortcut icon' href='/images/favicon.png' type='image/x-icon')
+    link(href='https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Nunito:400,400i,700,700i,800,800i&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='/stylesheets/boostrap/bootstrap-reboot.min.css')
+    link(rel='stylesheet' href='/stylesheets/boostrap/bootstrap-grid.min.css')
+    link(rel='stylesheet' href='/library/leaflet/leaflet.css')
+    link(rel='stylesheet' href='/stylesheets/style.css')
+
+    script(src='https://kit.fontawesome.com/683c5a95c2.js' crossorigin='anonymous')
+    script(src='/library/jquery/jquery-3.4.1.min.js')
+    script(src='/library/leaflet/leaflet.js')
+    script(src='/javascripts/app.js')
+  body
+
+  include components/header
+
+  noscript
+    .container.mt-l.py-l
+      h2 Votre navigateur n'est pas supporté ou les script ont été bloqués.
+      p
+        | Merci de changer de navigateur ou d'activer les scripts sur ce site afin de profiter du fonctionnement voulu.
+
+  main#page
+
+    block content
+
+  include components/footer

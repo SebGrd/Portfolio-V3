@@ -1,0 +1,163 @@
+
+//BUTTONS
+.btn{
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 50px;
+  background-image: linear-gradient(45deg, transparent, #05dcff);
+  background-color: #1334ab;
+  color: white;
+  text-align: center;
+  word-break: break-word;
+  font-weight: 600;
+  transition: all 150ms ease-in-out;
+  &:hover{
+    color: white;
+    text-decoration: none;
+    background-color: #00899f;
+    box-shadow: 1px 1px 5px 0 #00899f;
+  }
+  &.btn--light{
+    background: white;
+    color: $dark-text;
+    &:hover{
+      background: #eeeeee;
+      box-shadow: 1px 1px 5px 0 #b4c3c5;
+    }
+  }
+  @each $gradient, $value in $card-gradient {
+    &--#{$gradient}{
+      background: $value;
+      &:hover{
+        box-shadow: 1px 1px 5px 0 #b4c3c5;
+      }
+    }
+  }
+}
+
+.disabled{
+  cursor: not-allowed;
+}
+
+// CARDS
+.colored-card{
+  padding: 20px;
+  background: linear-gradient(45deg, #1334ab, #05dcff);
+  box-shadow: 3px 3px 3px #e1e1e1;
+  border-radius: 20px;
+  color: white;
+  h3{
+    font-size: 22px;
+    line-height: 1;
+  }
+  p{
+    font-size: 16px;
+  }
+  .colored-card_date{
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  @each $gradient, $value in $card-gradient {
+    &--#{$gradient}{
+      background: $value;
+    }
+  }
+}
+
+.article-card{
+  @extend .colored-card;
+  .thumbnail{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 200px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    img{
+      width: 100%;
+    }
+    .article_date{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: white;
+      padding: 8px;
+      color: $dark-text;
+      font-weight: 600;
+      border-top-right-radius: 6px;
+      box-shadow: 0 0 6px -2px #8e939685;
+    }
+  }
+  p{
+    line-height: 1;
+  }
+}
+
+//COLORED ICONS
+.icon-colored{
+  background: -webkit-linear-gradient(45deg, #1334ab, #05dcff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @each $gradient, $value in $card-gradient {
+    &--#{$gradient}{
+      background: $value;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+//PILLS
+.pills{
+  background: -webkit-linear-gradient(45deg, #1334ab, #05dcff);
+  border-radius: 20px;
+  padding: 1px 10px;
+  font-weight: 600;
+  @each $gradient, $value in $card-gradient {
+    &--#{$gradient}{
+      background: $value;
+    }
+  }
+}
+
+
+//SLICK DOTS
+.slick-initialized{
+  .slick-slide{
+    outline: none;
+  }
+}
+.slick-dots{
+  display: flex;
+  justify-content: center;
+  align-items: self-start;
+  padding: 0;
+  margin: 20px 0 0 0;
+  list-style: none;
+  li{
+    position: relative;
+    margin: 0 8px;
+    &:after{
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: 0;
+      left: 0;
+      height: 3px;
+      pointer-events: none;
+      background: gray;
+      transition: all 400ms ease;
+    }
+    &.slick-active{
+      &:after{
+        background: gray;
+      }
+    }
+    button{
+      opacity: 0;
+    }
+  }
+}

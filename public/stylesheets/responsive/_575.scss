@@ -1,0 +1,40 @@
+@media (max-width: 575px) {
+
+  header {
+    padding: 0 20px;
+
+    h1 {
+      a {
+        font-size: 24px;
+      }
+    }
+
+    nav {
+      &.active {
+        ul {
+          padding: 0 30px 0 30px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .home-wallpaper {
+    min-height: 400px;
+
+    h2 {
+      left: 20px;
+      font-size: 50px;
+    }
+  }
+
+  .home-description {
+    .home-title {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}

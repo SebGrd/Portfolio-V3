@@ -1,0 +1,115 @@
+extends layout
+
+
+
+block content
+    .page-header
+        .page-header_image
+            img.img-resp.center(src='/images/utec-avon-fontainebleau.jpg' alt='utec')
+        .container
+            h2 Centre de Formation d'Apprentis - UTEC
+    section.content
+        .container
+            h2 L'UTEC forme aujourd'hui :
+            .row
+                .col-12
+                    ul
+                        li
+                            b des jeunes en apprentissage, du
+                            b CAP au Bac+5, à 46 diplômes, pour plus de 100 métiers différents. L'apprentissage au CFA UTEC associe,
+                            b en alternance, l'enseignement dans nos locaux et la vie professionnelle en entreprise.
+                        li
+                            b des salariés ou demandeurs d'emplois à des formations continues réglementées ou
+                            | obligatoires, des formations certifiantes, linguistiques ou encore sur mesure.
+                .col-12
+                    .info-list.my-l
+                        #graduated.info-list-item
+                            i.fas.fa-user-graduate.icon-colored.icon-colored--purple
+                            span 2000
+                            p Nombre de jeunes form&eacute;s par an
+                        #exam.info-list-item
+                            i.fa.fa-graduation-cap.icon-colored.icon-colored--blue
+                            span 85%
+                            p Taux de r&eacute;ussite aux examens en 2018
+                        #job.info-list-item
+                            i.fas.fa-file-alt.icon-colored.icon-colored--yellow
+                            span 82%
+                            p Taux d&rsquo;insertion professionnelle &agrave; 6 mois
+                        #trainee.info-list-item
+                            i.fa.fa-suitcase.icon-colored.icon-colored--blue
+                            span 1500
+                            p Nombre de stagiaires form&eacute;s par an
+                        #schools.info-list-item
+                            i.fas.fa-school.icon-colored.icon-colored--yellow
+                            span 5
+                            p Nombre de sites UTEC
+                        #company.info-list-item
+                            i.fas.fa-hands-helping.icon-colored.icon-colored--purple
+                            span 1500
+                            p Nombre d&apos;entreprises partenaires
+        .full-bg
+            .container
+                h2 Qu&rsquo;est-ce que le BTS SIO&thinsp;?
+                p
+                    | Le BTS
+                    b Services informatique aux Organisations
+                    |  est un dipl&ocirc;me reconnu par l&rsquo;&eacute;tat de niveau
+                    b Bac+2
+                    | .
+                    |                 Il remplace l&rsquo;ancien BTS informatique de Gestion (BTS IG). Il propose deux sp&eacute;cialit&eacute;s bien
+                    |                 distinctes : le BTS SIO
+                    b SISR
+                    |  et le BTS SIO
+                    b SLAM
+                    | .
+                p
+                    | Le BTS SIO option
+                    b SLAM (Solutions Logicielles et Applications M&eacute;tiers)
+                    |  forme des
+                    b sp&eacute;cialistes des logiciels
+                    |  (r&eacute;daction
+                    |                 d&rsquo;un cahier des charges, formulation des besoins et sp&eacute;cifications,
+                    |                 d&eacute;veloppement, int&eacute;gration au sein de la soci&eacute;t&eacute;).
+                    br
+                p
+                    | Les techniciens sup&eacute;rieurs en informatique option slam, sont pr&eacute;par&eacute;s aux m&eacute;tiers de :
+                ul.divided-list
+                    li
+                        b D&eacute;veloppeur d&rsquo;applications informatiques
+                    li
+                        b D&eacute;veloppeur informatique
+                    li
+                        b Analyste d&rsquo;applications ou d&rsquo;&eacute;tudes
+                    li
+                        b Analyste programmeur
+                    li
+                        b Charg&eacute; d&rsquo;&eacute;tudes informatiques
+                    li
+                        b Informaticien d&rsquo;&eacute;tudes
+                    li
+                        b Programmeur analyste
+                    li
+                        b Programmeur d&rsquo;applications
+                    li
+                        b Technicien d&rsquo;&eacute;tudes informatiques
+                    li
+                        b Responsable des services applicatifs
+    section.page-footer
+        .container
+            .row.my-xl
+                .col-12.col-lg-5
+                    img#plan-school.img-resp.img-thumbnail.center(src='/images/carte.jpg' alt='')
+                .col-12.col-lg-7
+                    #map-school.page-footer_map
+                    .page-footer_info.my-s
+                        p
+                            b
+                                | Avon-Fontainebleau
+                                br
+                                | 1 rue du Port de Valvins
+                                br
+                                | 77215 Avon cedex
+                            br
+                            | t&eacute;l. :
+                            b 01 60 72 74 00
+                        img.img-resp(src='/images/logo.png' alt='')

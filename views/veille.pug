@@ -1,0 +1,72 @@
+extends layout
+
+block content
+
+    .page-header
+        .page-header_image
+            img.img-resp.center(src='/images/bg-veilles.png' alt='utec')
+        .container
+            h2 Veille
+    section.content.mb-xl
+        .container
+            h2 Veille
+            p Une veille technologique et juridique sont mises &agrave; disposition :
+            .d-md-flex.align-content-center.justify-content-between
+                a#btnVeilleIT.btn.btn--blue.w-100.mr-md-2.mb-3.mb-md-0(href='#!') Veille technologique
+                a#btnVeilleJUR.btn.btn--purple.w-100.ml-md-2(href='#!') Veille juridique
+    section.veille.veille-it
+        .container
+            .content
+                h2 Veille technologique
+                p
+                    b
+                        | Sur cette page figure les derni&egrave;res information sur l&apos;informatique et la technologie.
+            .row
+                // foreach
+                .col-12.col-md-6
+                    article.article-card.mb-m
+                        .thumbnail
+                            img.img-resp(src='#url' alt='title')
+                            span.article_date DATE
+                        .caption
+                            h3 TITLE
+                            p
+                                small CATEGORIE
+                            p DESCRIPTION
+                            a.btn.btn--light(href='#link' target='_blank' title='TITLE')
+                                | Lire
+                                | l&apos;article
+    section.veille.veille-jur
+        .container
+            .content
+                h2 Veille juridique
+                p
+                    b
+                        | Sur cette page figure les derni&egrave;res information relatant de la juridique informatique.
+            .row
+                // foreach
+                .col-12.col-md-6
+                    article.article-card.colored-card--purple.mb-m
+                        .caption
+                            h3 TITLE
+                            p DESCRIPTION
+                            a.btn.btn--light(href='#link' target='_blank' title='TITLE')
+                                | Lire
+                                | l&apos;article
+    section.credits.mb-l
+        .container
+            .content
+                h2 Provenance des flux :
+                .d-md-flex
+                    .credits_it.w-100.mb-5
+                        h3 Informatique
+                        ul
+                            li TITRE DU FLUX
+                        p DESCRIPTION DU FLUX
+                        a.btn.btn--blue(href='#link' target='_blank') LINK SITE
+                    .credits-jur.w-100
+                        h3 Juridique
+                        ul
+                            li TITRE DU FLUX
+                        p DESCRIPTION DU FLUX
+                        a.btn.btn--purple(href='#link' target='_blank') LINK SITE

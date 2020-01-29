@@ -1,0 +1,70 @@
+extends layout
+
+block content
+  section.home-wallpaper
+    h2 Intégrateur web
+    svg.waves(viewbox='0 0 100 23')
+      path(fill='#ffffff' opacity='0.5' d='M0 30 V15 Q30 3 60 15 V30z')
+      path(fill='#ffffff' d='M0 30 V12 Q30 17 55 12 T100 11 V30z')
+  section.home-description.container
+    h2.home-title Qui suis-je ?
+    .row
+      .col-12.col-md-7
+        p
+          | Je m'appelle Sébastien, j'ai 19 ans et je suis actuellement étudiant en alternance au CFA UTEC
+          | d'Avon en BTS SIO (Service Informatique aux Organisations) option SLAM (Solutions Logicielles et Applications
+          | Métier) cursus que j'ai choisi dû à ma passion pour l'informatique.
+        p
+          | Je suis salarié alternant en tant qu'intégrateur web chez Net.Com, agence de développement web.
+        a.btn(href='/uploads/cv-sebastien-gaudard.pdf' target='_blank') Mon CV
+      .col-12.col-md-5
+        img.img-resp(src='/images/code-page.png' alt='code-page')
+  .home-section-separator
+  section.home-description.container
+    h2.home-title Mes dipl&ocirc;mes
+    p.mb-m
+      | Les diplômes ci-dessous ont été acquis sur le long de ma scolarité et de mes études.
+    .row.home-card-list
+      .col-12.col-md-4
+        .colored-card
+          h3 BEP SEN (TR)
+          p.colored-card_date 2017
+          p Lycée LaFayette - Fontaineroux
+          a.btn.btn--light(href='https://eduscol.education.fr/sti/formations/bep-systemes-electroniques-numeriques' target='_blank') Formation
+      .col-12.col-md-4
+        .colored-card.colored-card--purple
+          h3 BAC PRO SEN (EIE)
+          p.colored-card_date 2018
+          p Lycée LaFayette Fontaineroux
+          a.btn.btn--light(href='https://eduscol.education.fr/sti/formations/bac-pro-systemes-electroniques-numeriques-sen' target='_blank') Formation
+      .col-12.col-md-4
+        .colored-card
+          h3 BTS SIO (SLAM)
+          p.colored-card_date 2020
+          p UTEC - Avon
+          a.btn.btn--light(href='https://www.orientation.com/diplomes/bts-services-informatiques-aux-organisations-option-b-solutions-logicielles-et-applications-metiers.html' target='_blank') Formation
+  .home-section-separator
+  section.home-description.container
+    h2.home-title Mes éxperiences professionnelles
+    .row
+      .col-12.col-md-5
+        img.img-resp(src='/images/hiring.png' alt='code-page')
+      .col-12.col-md-7
+        p.mb-m
+          | Grâce à mon cursus, j'ai eu la chance d'avoir eu plusieurs éxperiences
+          | professionnelles, notament 4 mois de stage et 2 ans d'alternance.
+        .row.home-card-list-lg.mb-m
+          .col-12.col-lg-6
+            .colored-card
+              h3 Direction du Syst&egrave;me d&apos;Information
+              p.colored-card_date 3 mois - 2017/2018
+              p Universit&eacute; Sorbonne - Paris 6
+              a.btn.btn--light(href='https://www.sorbonne-universite.fr/' target='_blank') Universit&eacute;
+          .col-12.col-lg-6
+            .colored-card.colored-card--purple
+              h3 Développeur Front-End / Intégrateur web
+              p.colored-card_date 2 ans - 2018/2020
+              p Net.Com - Sens
+              a.btn.btn--light(href='https://www.net-com.fr/' target='_blank') Entreprise
+        a.btn(href='/uploads/cv-sebastien-gaudard.pdf' target='_blank') Mon CV
+  .home-section-separator

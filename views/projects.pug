@@ -1,0 +1,76 @@
+extends layout
+
+block content
+    .page-header
+        .page-header_image
+            img.img-resp.center(src='/images/bg-commits.png' alt='utec')
+        .container
+            h2 Projets
+    section.content
+        .container
+            h2 Projets r&eacute;alis&eacute;s
+            p
+                | La liste suivantes contient quelques projets r&eacute;alis&eacute;s en cours, en entreprise ou chez moi.
+    section.project-list
+        .container
+            .row
+                .col-12.col-md-6
+                    article.article-card.colored-card--light-blue.mb-m
+                        .thumbnail
+                            img.img-resp(src='/images/inthome.png' alt='illu')
+                            span.article_date 19/12/2019
+                        .caption
+                            h3.mb-3 Portfolio
+                            p
+                                span.pills.pills--purple Ecole
+                            p
+                                | Tout simplement le portfolio sur lequel vous &ecirc;tes en train de naviguer. Ce projet contribut &agrave; l&apos;&eacute;preuve E6 permettant de valider le BTS SIO.
+                            a.btn.btn--light(href='https://sebg.dev/portfolio/' target='_blank' title='link') Voir le projet
+                .col-12.col-md-6
+                    article.article-card.colored-card--blue.mb-m
+                        .thumbnail
+                            img.img-resp(src='/images/bibliotec.png' alt='illu')
+                            span.article_date 05/11/2019
+                        .caption
+                            h3.mb-3 Bibliotec
+                            p
+                                span.pills.pills--light-blue Ecole
+                            p
+                                | Syst&egrave;me de gestion de livres sur plusieurs sites (diff&eacute;rentes bibliot&egrave;ques). Gestion des d&apos;emprunts de livres, de d&eacute;couverte de la librairie et d&apos;administration de la base de donn&eacute;es des livres.
+                            a.btn.btn--light.disabled(href='#!' title='link') Voir le projet
+                .col-12.col-md-6
+                    article.article-card.colored-card--blue.mb-m
+                        .thumbnail
+                            img.img-resp(src='/images/pingu.png' alt='illu')
+                            span.article_date 19/12/2019
+                        .caption
+                            h3.mb-3 PinguBot
+                            p
+                                span.pills.pills--light-blue Personnel
+                            p
+                                | PinguBot est un bot discord poss&eacute;dant des commandes utiles permettant par example d&apos;avoir des statistiques sur le compte d&apos;un joueur de League of Legends ou osu!. Il poss&egrave;de aussi un Ultimate Bravery d&eacute;stin&eacute; &agrave; LoL (randomizer champion+item).
+                            a.btn.btn--light.disabled(href='#!' title='link') Voir le projet
+                .col-12.col-md-6
+                    article.article-card.colored-card--light-blue.mb-m
+                        .thumbnail
+                            img.img-resp(src='/images/seo_tool.jpg' alt='illu')
+                            span.article_date 17/02/2019
+                        .caption
+                            h3.mb-3 Net.Com SEO Tool
+                            p
+                                span.pills.pills--purple Entreprise
+                            p
+                                | Le SEO Tool est un outil interne cr&eacute;&eacute; dans le but d&apos;&eacute;tudier les pages des site que l&apos;agence met en ligne afin d&apos;avoir un bon r&eacute;f&eacute;rencement. L&apos;outil rescence les erreur qui pourrait compromettre le SEO du site.
+                            a.btn.btn--light.disabled(href='#!' title='link') Voir le projet
+                .col-12.col-md-6
+                    article.article-card.colored-card--light-blue.mb-m
+                        .thumbnail
+                            img.img-resp(src='/images/home.png' alt='illu')
+                            span.article_date 19/12/2019
+                        .caption
+                            h3.mb-3 My Domotique
+                            p
+                                span.pills.pills--purple Personnel
+                            p
+                                | My Domotique est une webapp qui permet de contr&ocirc;ler les objets connect&eacute;s ou non de la maison via son interface. On peux notemment allumer la t&eacute;l&eacute;/box, jouer de la musique sur une enceinte, contr&ocirc;ler les lumi&egrave;res, etc.
+                            a.btn.btn--light(href='https://sebg.dev/portfolio/' target='_blank' title='link') Voir le projet

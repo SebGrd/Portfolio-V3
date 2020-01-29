@@ -1,0 +1,38 @@
+.home-wallpaper{
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    // background: linear-gradient(45deg, #1334ab, #05dcff); //SI PAS DE IMG
+    background-image: url(/images/background-home.jpg);
+    background-size: cover;
+    background-position: bottom;
+    h2{
+        position: absolute;
+        top: 30%;
+        left: 180px;
+        padding-right: 15px;
+        font-size: 100px;
+        font-weight: 900;
+        color: white;
+        line-height: 1;
+    }
+    .waves{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.home-section-separator{
+    padding: 60px 0;
+}
+
+.home-description{
+    .home-title{
+        font-size: 50px;
+    }
+    p{
+        font-size: 20px;
+    }
+}

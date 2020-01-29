@@ -1,0 +1,99 @@
+
+//CENTER
+.center{
+  display: block;
+  margin: 0 auto;
+}
+
+
+//IMAGE
+.img-resp{
+  max-width: 100%;
+  height: auto;
+}
+
+.img-thumbnail{
+  padding: 2px;
+  border: 1px solid $light-gray;
+  border-radius: 3px;
+}
+
+
+//WIDTH
+$width-percantage:(
+        '0': 0,
+        '25': 25%,
+        '50': 50%,
+        '75': 75%,
+        '100': 100%
+);
+
+@each $width, $value in $width-percantage{
+  .w-#{$width}{
+    width: $value;
+  }
+}
+
+
+//MARGIN & PADDING
+$sizes-px:(
+        '0': 0,
+        'xs': 8px,
+        's': 15px,
+        'm': 30px,
+        'l': 60px,
+        'xl': 100px
+);
+
+$direction-letter:(
+        't': top,
+        'r': right,
+        'b': bottom,
+        'l': left
+);
+
+@each $margin, $value in $sizes-px{
+  .my-#{$margin}{
+    padding: $value 0;
+  }
+}
+@each $margin, $value in $sizes-px{
+  .mx-#{$margin}{
+    padding: 0 $value;
+  }
+}
+
+@each $margin, $value in $sizes-px{
+  @each $direction, $side in $direction-letter{
+    .m#{$direction}-#{$margin}{
+      margin-#{$side}: $value;
+    }
+  }
+}
+
+@each $margin, $value in $sizes-px{
+  .py-#{$margin}{
+    padding: $value 0;
+  }
+}
+@each $margin, $value in $sizes-px{
+  .px-#{$margin}{
+    padding: 0 $value;
+  }
+}
+
+@each $margin, $value in $sizes-px{
+  @each $direction, $side in $direction-letter{
+    .p#{$direction}-#{$margin}{
+      padding-#{$side}: $value;
+    }
+  }
+}
+
+//FLEX
+
+
+
+
+
+

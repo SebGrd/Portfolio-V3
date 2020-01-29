@@ -1,0 +1,25 @@
+@media (max-width: 767px){
+    .home-card-list{
+        .colored-card{
+            margin-bottom: 30px;
+        }
+    }
+
+    .home-wallpaper{
+        min-height: 400px;
+        h2{
+            font-size: 70px;
+        }
+    }
+
+    footer{
+        .md-center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .md-mb{
+            margin-bottom: 15px;
+        }
+    }
+}
