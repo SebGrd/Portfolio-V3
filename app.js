@@ -61,7 +61,7 @@ let port;
 if (process.env.PORT) {
     port = process.env.PORT;
 } else {
-    port = 8080;
+    port = 80;
 }
 const server = app.listen(port, () => {
     const host = server.address().address;
