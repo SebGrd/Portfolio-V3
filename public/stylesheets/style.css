@@ -434,7 +434,8 @@ body {
   .pills--light {
     background: #f3f1f0; }
   .pills--white {
-    background: #ffffff; }
+    background: #ffffff;
+    color: black; }
 
 .slick-initialized .slick-slide {
   outline: none; }

@@ -122,8 +122,14 @@
   @each $gradient, $value in $card-gradient {
     &--#{$gradient}{
       background: $value;
+      @if($gradient == 'white'){
+        color: black;
+      }
     }
   }
+}
+.veille-pills{
+
 }
 
 

@@ -1,7 +1,8 @@
 extends layout
 
 block content
-
+    - function zeroAdder(number) {return number < 10 ? '0'+number : number}
+    - function frDate(date, delimiter) {return zeroAdder(date.getDay()) + delimiter + zeroAdder((date.getMonth()+1)) + delimiter + date.getFullYear()}
     .page-header
         .page-header_image
             img.img-resp.center(src='/images/bg-veilles.png' alt='utec')
@@ -22,37 +23,39 @@ block content
                     b
                         | Sur cette page figure les derni&egrave;res information sur l&apos;informatique et la technologie.
             .row
-                // foreach
-                .col-12.col-md-6
-                    article.article-card.mb-m
-                        .thumbnail
-                            img.img-resp(src='#url' alt='title')
-                            span.article_date DATE
-                        .caption
-                            h3 TITLE
-                            p
-                                small CATEGORIE
-                            p DESCRIPTION
-                            a.btn.btn--light(href='#link' target='_blank' title='TITLE')
-                                | Lire
-                                | l&apos;article
+                each article in techFeed.items
+                    .col-12.col-md-6
+                        article.article-card.mb-m
+                            .thumbnail
+                                img.img-resp(src=article.enclosure.url alt='title')
+                                - function zeroAdder(number) {return number < 10 ? '0'+number : number}
+                                - function frDate(date, delimiter) {return zeroAdder(date.getDay()) + delimiter + zeroAdder((date.getMonth()+1)) + delimiter + date.getFullYear()}
+                                span.article_date #{frDate(new Date(article.isoDate), '/')}
+                            .caption
+                                h3 #{article.title}
+                                p(style='line-break: anywhere;')
+                                    each category in article.categories
+                                        small.pills.pills--white.mr-1.mb-1 #{category}
+                                p #{article.content}
+                                a.btn.btn--light(href=article.link target='_blank' title=article.title)
+                                    | Lire l'article
     section.veille.veille-jur
         .container
             .content
                 h2 Veille juridique
                 p
                     b
-                        | Sur cette page figure les derni&egrave;res information relatant de la juridique informatique.
+                        | Sur cette page figure les dernières informations relatant de la juridique informatique.
             .row
-                // foreach
-                .col-12.col-md-6
-                    article.article-card.colored-card--purple.mb-m
-                        .caption
-                            h3 TITLE
-                            p DESCRIPTION
-                            a.btn.btn--light(href='#link' target='_blank' title='TITLE')
-                                | Lire
-                                | l&apos;article
+                each article in juriFeed.items
+                    .col-12.col-md-6
+                        article.article-card.mb-m.colored-card--purple
+                            .caption
+                                h3 #{article.title.toString()}
+                                b.article_date.mb-2.d-block #{frDate(new Date(article.isoDate), '/')}
+                                p #{article.contentSnippet}
+                                a.btn.btn--light(href=article.link target='_blank' title=article.title)
+                                    | Lire l'article
     section.credits.mb-l
         .container
             .content
@@ -61,12 +64,12 @@ block content
                     .credits_it.w-100.mb-5
                         h3 Informatique
                         ul
-                            li TITRE DU FLUX
-                        p DESCRIPTION DU FLUX
-                        a.btn.btn--blue(href='#link' target='_blank') LINK SITE
+                            li #{techFeed.title}
+                        p #{techFeed.description}
+                        a.btn.btn--blue(href=techFeed.link target='_blank') Visiter le site
                     .credits-jur.w-100
                         h3 Juridique
                         ul
-                            li TITRE DU FLUX
-                        p DESCRIPTION DU FLUX
-                        a.btn.btn--purple(href='#link' target='_blank') LINK SITE
+                            li #{juriFeed.title}
+                        p #{juriFeed.description}
+                        a.btn.btn--purple(href=juriFeed.link target='_blank') Visiter le site
