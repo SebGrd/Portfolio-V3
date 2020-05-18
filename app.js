@@ -11,6 +11,7 @@ const entrepriseRouter = require('./routes/entreprise');
 const projectsRouter = require('./routes/projects');
 const competencesRouter = require('./routes/competences');
 const veilleRouter = require('./routes/veille');
+const contactRouter = require('./routes/contact');
 
 const app = express();
 
@@ -36,6 +37,7 @@ app.use('/entreprise', entrepriseRouter);
 app.use('/mes-projets', projectsRouter);
 app.use('/mes-competences', competencesRouter);
 app.use('/veille', veilleRouter);
+app.use('/contact', contactRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
