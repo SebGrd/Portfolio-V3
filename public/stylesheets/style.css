@@ -299,6 +299,14 @@ body {
     background: linear-gradient(45deg, #13ab81, #05fff3); }
     .btn--light-blue:hover {
       box-shadow: 1px 1px 5px 0 #b4c3c5; }
+  .btn--light {
+    background: #f3f1f0; }
+    .btn--light:hover {
+      box-shadow: 1px 1px 5px 0 #b4c3c5; }
+  .btn--white {
+    background: #ffffff; }
+    .btn--white:hover {
+      box-shadow: 1px 1px 5px 0 #b4c3c5; }
 
 .disabled {
   cursor: not-allowed; }
@@ -331,6 +339,11 @@ body {
     background: linear-gradient(45deg, #3c3c3c, #919191); }
   .colored-card--light-blue {
     background: linear-gradient(45deg, #13ab81, #05fff3); }
+  .colored-card--light {
+    background: #f3f1f0;
+    color: black; }
+  .colored-card--white {
+    background: #ffffff; }
 
 .article-card .thumbnail {
   position: relative;
@@ -390,6 +403,14 @@ body {
     background: linear-gradient(45deg, #13ab81, #05fff3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
+  .icon-colored--light {
+    background: #f3f1f0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  .icon-colored--white {
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
 
 .pills {
   background: -webkit-linear-gradient(45deg, #1334ab, #05dcff);
@@ -410,6 +431,10 @@ body {
     background: linear-gradient(45deg, #3c3c3c, #919191); }
   .pills--light-blue {
     background: linear-gradient(45deg, #13ab81, #05fff3); }
+  .pills--light {
+    background: #f3f1f0; }
+  .pills--white {
+    background: #ffffff; }
 
 .slick-initialized .slick-slide {
   outline: none; }
