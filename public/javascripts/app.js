@@ -1,9 +1,7 @@
 /*jshint esversion: 6 */
 
 
-
-
-$(document).ready( () => {
+$(document).ready(() => {
 
     //NAV MENU
     const nav = $('nav');
@@ -17,26 +15,26 @@ $(document).ready( () => {
 
     });
     $(window).resize(() => { //REDIMENSIONNEMENT
-        if(window.innerWidth > 1200){
+        if (window.innerWidth > 1200) {
             nav.removeClass('active');
-            nav.css({"display":""});
+            nav.css({"display": ""});
         }
     });
 
     //HEADER PAGES INTERNE
-    if ($('.home-wallpaper').length){
+    if ($('.home-wallpaper').length) {
         //HEADER BACKGROUND ON SCROLL
         $(window).scroll(() => {
             var scroll = $(window).scrollTop();
             var windowHeight = window.innerHeight;
-            if(windowHeight > 850){
-                if(scroll > 200){
+            if (windowHeight > 850) {
+                if (scroll > 200) {
                     $('header').addClass('scrolled');
                 } else {
                     $('header').removeClass('scrolled');
                 }
-            } else{
-                if(scroll > 100){
+            } else {
+                if (scroll > 100) {
                     $('header').addClass('scrolled');
                 } else {
                     $('header').removeClass('scrolled');
@@ -47,10 +45,10 @@ $(document).ready( () => {
     } else {
         $('header').addClass('scrolled');
     }
-    
+
 
     //MAP SCHOOL
-    if ($('#map-school').length){
+    if ($('#map-school').length) {
         var mapSchool = L.map('map-school').setView([48.426081, 2.743533], 11);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
@@ -59,7 +57,7 @@ $(document).ready( () => {
     }
 
     //MAP COMPANY
-    if ($('#map-company').length){
+    if ($('#map-company').length) {
         var mapCompany = L.map('map-company').setView([48.213988, 3.277974], 11);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
@@ -68,20 +66,31 @@ $(document).ready( () => {
     }
 
     //VEILLE TECH/JUR
-    if ($('.veille-it').length && $('.veille-jur').length){
+    if ($('.veille-it').length && $('.veille-jur').length) {
         veilleIT = $('.veille-it');
         veilleJUR = $('.veille-jur');
         veilleJUR.hide();
         veilleIT.hide();
 
-        $('#btnVeilleIT').click( () => {
+        $('#btnVeilleIT').click(() => {
             veilleJUR.hide();
-           veilleIT.fadeIn();
+            veilleIT.fadeIn();
         });
-        $('#btnVeilleJUR').click( () => {
+        $('#btnVeilleJUR').click(() => {
             veilleIT.hide();
             veilleJUR.fadeIn();
         });
     }
 
+    $('.close-modal').click(e => {
+        e.currentTarget.closest('dialog').style.display = 'none'
+    })
+    $('#open-annonces-auto').click(e => {
+        document.getElementById('projet-annonce-auto').style.display = 'flex'
+    })
+    $('#open-colabarticle').click(e => {
+        document.getElementById('projet-colabarticle').style.display = 'flex'
+    })
+
 });
+

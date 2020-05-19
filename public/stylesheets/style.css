@@ -465,6 +465,36 @@ body {
     .slick-dots li button {
       opacity: 0; }
 
+.project-modal {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: 0px 0px 0px 100px #0000008c;
+  border-radius: 50px;
+  z-index: 10;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  width: auto;
+  height: auto;
+  border: none; }
+  .project-modal .modal-wrapper {
+    padding: 15px;
+    position: relative; }
+    .project-modal .modal-wrapper .close-modal {
+      position: absolute;
+      display: flex;
+      top: -30px;
+      right: 0;
+      font-size: 40px;
+      color: #ea3d3d;
+      background: transparent;
+      border: none; }
+
 header {
   display: flex;
   justify-content: space-between;

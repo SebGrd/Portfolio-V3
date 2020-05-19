@@ -25,7 +25,7 @@ block content
                                 span.pills.pills--white Ecole
                             p
                                 | Tout simplement le portfolio sur lequel vous &ecirc;tes en train de naviguer. Ce projet contribut &agrave; l&apos;&eacute;preuve E6 permettant de valider le BTS SIO.
-                            a.btn.btn--light(href='https://sebg.dev/portfolio/' target='_blank' title='link') Voir le projet
+                            a.btn.btn--light(href='https://sebg.dev/portfolio/' target='_blank' title='Voir le projet') Voir le projet
                 .col-12.col-md-6
                     article.article-card.colored-card--light.mb-m
                         .thumbnail
@@ -37,7 +37,7 @@ block content
                                 span.pills.pills--white Ecole
                             p
                                 | Syst&egrave;me de gestion de livres sur plusieurs sites (diff&eacute;rentes bibliot&egrave;ques). Gestion des d&apos;emprunts de livres, de d&eacute;couverte de la librairie et d&apos;administration de la base de donn&eacute;es des livres.
-                            a.btn.btn--light.disabled(href='#!' title='link') Voir le projet
+                            a.btn.btn--light.disabled(href='#!' title='Voir le projet') Voir le projet
                 .col-12.col-md-6
                     article.article-card.colored-card--light.mb-m
                         .thumbnail
@@ -49,7 +49,7 @@ block content
                                 span.pills.pills--white Personnel
                             p
                                 | PinguBot est un bot discord poss&eacute;dant des commandes utiles permettant par example d&apos;avoir des statistiques sur le compte d&apos;un joueur de League of Legends ou osu!. Il poss&egrave;de aussi un Ultimate Bravery d&eacute;stin&eacute; &agrave; LoL (randomizer champion+item).
-                            a.btn.btn--light.disabled(href='#!' title='link') Voir le projet
+                            a.btn.btn--light.disabled(href='#!' title='Voir le projet') Voir le projet
                 .col-12.col-md-6
                     article.article-card.colored-card--light.mb-m
                         .thumbnail
@@ -61,7 +61,7 @@ block content
                                 span.pills.pills--white Entreprise
                             p
                                 | Le SEO Tool est un outil interne cr&eacute;&eacute; dans le but d&apos;&eacute;tudier les pages des site que l&apos;agence met en ligne afin d&apos;avoir un bon r&eacute;f&eacute;rencement. L&apos;outil rescence les erreur qui pourrait compromettre le SEO du site.
-                            a.btn.btn--light.disabled(href='#!' title='link') Voir le projet
+                            a.btn.btn--light.disabled(href='#!' title='Voir le projet') Voir le projet
                 .col-12.col-md-6
                     article.article-card.colored-card--light.mb-m
                         .thumbnail
@@ -72,7 +72,7 @@ block content
                             p
                                 span.pills.pills--white Ecole
                             p Site d'annonces automobiles pour pro ou particulier. Possiblité de rechercher une annonces avec un tri ou de poster sa propre annonce.
-                            a.btn.btn--light(href='https://sebg.dev/portfolio/' target='_blank' title='link') Voir le projet
+                            a.btn.btn--light#open-annonces-auto(href='#!' title='Voir le projet') Voir le projet
                 .col-12.col-md-6
                     article.article-card.colored-card--light.mb-m
                         .thumbnail
@@ -83,7 +83,7 @@ block content
                             p
                                 span.pills.pills--white Ecole
                             p ColabArticle est un gestionnaire d'éditeur collaboratif en temps réel en ligne. Il fonctionne conjointement avec Etherpad, éditeur collaboratif.
-                            a.btn.btn--light(href='https://sebg.dev/portfolio/' target='_blank' title='link') Voir le projet
+                            a.btn.btn--light#open-colabarticle(href='#!' title='Voir le projet') Voir le projet
                 .col-12.col-md-6
                     article.article-card.colored-card--light.mb-m
                         .thumbnail
@@ -94,4 +94,70 @@ block content
                             p
                                 span.pills.pills--white Personnel
                             p Site d'un restaurant situé à Sens. On peut y commander parmis tous les plats que propose le buffet, puis venir retirer sa commande prête.
-                            a.btn.btn--light(href='https://sebg.dev/portfolio/' target='_blank' title='link') Voir le projet
+                            a.btn.btn--light.disabled(href='#!' title='Voir le projet') Voir le projet
+    section#project-modals.content
+        dialog#projet-annonce-auto.project-modal
+           .modal-wrapper
+               button.close-modal
+                    i.fas.fa-times
+               h2 Annonces Autos
+                   p Site d'annonces automobiles pour pro ou particulier. Possiblité de rechercher une annonces avec un tri ou de poster sa propre annonce.
+                   p Parmis les fonctionnalités du site figurent :
+                   ul
+                       li Créer un compte et s'y connecter
+                       li Poster des annonces via un formulaire interactif
+                       li Gérer ses annonces
+                       li Filtrer parmis toutes les annonces du site
+                       li Contacter par mail un vendeur
+                       li Connaitre à quel CRIT'air un véhicule est éligible
+                       li Calculer ses chevaux fiscaux
+                   hr
+                   .d-block.d-md-flex
+                       .el.mr-5
+                           h3 Documents :
+                               ul
+                                   li Fiche de présentation et documentations
+                                       br
+                                       a.btn.btn--blue(href='/uploads/fiche-de-presentation-annonces-auto.docx') Télécharger le document
+                                   li Cahier des charges
+                                       br
+                                       a.btn.btn--blue(href='/uploads/cahier-des-charges-annonces-autos.docx') Télécharger le document
+                       .el.ml-5
+                           h3 Technos:
+                               ul
+                                   li node.js
+                                   li MongoDB
+                                   li Pug
+
+        dialog#projet-colabarticle.project-modal
+            .modal-wrapper
+                button.close-modal
+                    i.fas.fa-times
+                h2 Annonces Autos
+                    p Site d'annonces automobiles pour pro ou particulier. Possiblité de rechercher une annonces avec un tri ou de poster sa propre annonce.
+                    p Parmis les fonctionnalités du site figurent :
+                    ul
+                        li Créer un compte et s'y connecter
+                        li Poster des annonces via un formulaire interactif
+                        li Gérer ses annonces
+                        li Filtrer parmis toutes les annonces du site
+                        li Contacter par mail un vendeur
+                        li Connaitre à quel CRIT'air un véhicule est éligible
+                        li Calculer ses chevaux fiscaux
+                    hr
+                    .d-block.d-md-flex
+                        .el.mr-5
+                            h3 Documents :
+                                ul
+                                    li Fiche de présentation et documentations
+                                        br
+                                        a.btn.btn--blue(href='/uploads/fiche-de-presentation-annonces-auto.docx') Télécharger le document
+                                    li Cahier des charges
+                                        br
+                                        a.btn.btn--blue(href='/uploads/cahier-des-charges-annonces-autos.docx') Télécharger le document
+                        .el.ml-5
+                            h3 Technos:
+                                ul
+                                    li node.js
+                                    li MongoDB
+                                    li Pug
